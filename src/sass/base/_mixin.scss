@@ -38,6 +38,10 @@
     @include position(fixed, $args...);
 }
 
+@mixin sticky($args...) {
+    @include position(sticky, $args...);
+}
+
 @mixin toRem($size) {
     font-size: ($size / 16px) * 1rem;
 }
@@ -61,7 +65,6 @@
     background-position: $position;
     background-repeat: $repeat;
 }
-
 // responsive 
 @mixin breakpoint-up($size){
     @media (min-width: map-get($breakpoints-up, $size)){
