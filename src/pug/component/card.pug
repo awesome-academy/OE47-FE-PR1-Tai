@@ -30,10 +30,11 @@ mixin responseItem(index)
 			each item,i in navTabItemRes
 				.col-6.d-none.d-sm-block.d-md-none.mx-auto
 					+cardItem(item.img,item.name,item.type,item.price)
+				if i == 1
+					- break
 		when "xs"
 			each item,i in navTabItemRes
 				.col-12.d-block.d-sm-none.mx-auto
 					+cardItem(item.img,item.name,item.type,item.price)
 				if i == 0
 					- break
-					

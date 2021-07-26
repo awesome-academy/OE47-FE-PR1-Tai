@@ -168,7 +168,6 @@
 
 .qoute {
     &__block {
-        height: 100%;
         @include flex();
         // response
         @include breakpoint-down("xs"){
@@ -234,4 +233,105 @@
     padding: 50px 0;
     margin-top: 50px;
     border-top: 1px solid $corlorCorder;
+}
+
+.social {
+    color: $corlorCorder;
+
+    &__icon {
+        @include flex(center,center);
+
+        i {
+            border: 1px solid $corlorCorder;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        p {
+            @include font(0.8rem,$fontItalic,bold);
+            margin-left: 10px;
+        }
+
+        &:hover {
+            color: $blackColor;
+            cursor: pointer;
+             
+            i {
+                border-color: $blackColor;
+            }
+        }
+    }
+}
+
+.contact {
+    max-width: 1150px;
+
+    &__title {
+        @include font(1rem,$fontDetault,bold);
+        position: relative;
+        padding-bottom: 20px;
+        text-align: center;
+
+        &::after {
+            content: "";
+            @include background(cover,center,no-repeat);
+            @include centerPosition("left");
+            @include size(100%,5px);
+            background-image: url(../images/Home-line.png);
+            bottom: 0;
+            // responsive
+            @include breakpoint-down("small") {
+                width: 80%;
+            }
+        }
+    }
+
+    &__blog {
+        line-height: 20px;
+        text-align: justify;
+
+        &__logo{
+            margin: 30px 0;
+        }
+
+        &__img{
+            margin-top: 30px;
+            
+            @include breakpoint-down("xs"){
+                width: 100%;
+            }
+        }
+
+        h3 {
+            @include font(0.8rem,$fontDetault,bold);
+            margin: 15px 0 5px 0;
+        }
+
+        p {
+            @include font(0.75rem,$fontDetault,300);
+            margin: 5px 0;
+
+            i{
+                font-style: italic;
+                color: $corlorCorder;
+            }
+        }
+
+        a {
+            color: $corlorCorder;
+            font-size: 0.8rem;
+
+            span {
+                float: right;
+            }
+
+            &:hover {
+                color: $blackColor;
+
+                span {
+                    color: $corlorCorder;
+                }
+            }
+        }
+    }
 }

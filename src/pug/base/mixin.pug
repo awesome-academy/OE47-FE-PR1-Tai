@@ -9,3 +9,20 @@ mixin itemProducts(image)
 	.categoties__image
 		img(src= image, alt="product item")
 		
+mixin contactItem(item,img)
+	h1.contact__title= item.title
+	if item.title == "VỀ CHÚNG TÔI"
+		article.contact__blog
+			img.contact__blog__logo(src=img, alt="contact image")
+			h3= item.head
+			p= item.content
+			a(href="#") Xem thêm
+	if item.title == "BLOG"
+		article.contact__blog
+			img.contact__blog__img(src=img, alt="contact image")
+			h3= item.head
+			p= item.content
+			p 
+				i Bởi NamTran(27/05/2015)
+			a(href="#") Đọc thêm
+				span 23 bình luận
