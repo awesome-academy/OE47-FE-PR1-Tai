@@ -1,0 +1,11 @@
+mixin promotionItem
+	each item in promotionItem
+		.col-12.col-sm-4.promotion__item
+			.icon.icon__promotion
+				i(class= item.icon)
+			p= item.desc
+
+mixin itemProducts(image)
+	.categoties__image
+		img(src= image, alt="product item")
+		
