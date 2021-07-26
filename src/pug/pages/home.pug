@@ -1,0 +1,20 @@
+section.banner
+    picture.banner__background
+        source(media="(max-width:1024px) and (min-width:481px)", srcset="images/home-tablet.png")
+        source(media="(max-width:480px)", srcset="images/Home-mobile.png")
+        img(src="images/Home55.jpg", alt="banner image")
+    .banner__infor
+        h1 GreenVera
+        p Sản phẩm tinh dầu dưỡng da 
+            span mới nhất của Mandala  
+        h2 GIÁ CHỈ&emsp;750.000đ
+        button.btn.btn-link MUA HÀNG
+
+section.promotion
+    .container.promotion__contain
+        .row
+            +promotionItem()
+
+
+
+    

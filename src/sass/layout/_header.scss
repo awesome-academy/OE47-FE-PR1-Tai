@@ -1,0 +1,167 @@
+header{
+    @include fixed(0,0,null,0);
+    z-index: 999;
+    height: 80px;
+    background-color: $colorGray !important;
+}
+
+.navbar{
+    height: inherit;
+    border-bottom: 1px solid $bottomHeader;
+
+    &-nav{
+        @include breakpoint-down("medium"){
+            text-align: center;
+            background-color: $bottomHeader;
+            margin-top: 8px;
+        }
+
+    }
+}
+
+.nav-link{
+    @extend .icon--header;
+    @include font(15px,null,bold);
+    padding-right: none !important;
+    margin: 0 5px;
+}
+
+//dropdown
+
+.dropdown{
+// dropdown san pham
+
+    &-menu{
+        width: 650px;
+        padding: 20px 30px;
+        margin: 25px 0 0 -220px !important ;
+        border: 2px solid $colorGreen;
+        border-radius: unset;
+
+        &::before{
+            content: "";
+            @include absolute(-10px,null,null,270px);
+            @include size(25px,10px);
+            background-color: $colorGreen;
+            clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+        }
+
+        // responsive
+        @include breakpoint-down("medium"){
+            &.show{
+                display: none ;
+            }
+        }
+    }
+
+    &__icon:hover{
+        cursor: pointer;
+        color: $colorGreen;
+    }
+
+    &-toggle{
+        // responsive
+        @include breakpoint-down("medium"){
+            &::after{
+                content: none;
+            }
+        }
+    }
+
+    &-item{
+        padding: 5px 0;
+        color: $colorListItem;
+    }
+
+    &-divider{
+        width: 100px;
+        margin: 1em 0;
+    }
+
+    ul{
+        width: 200px;
+        display: inline-block;
+
+        &:nth-child(2){
+            margin: 0 25px 0 -50px;
+        }
+
+        h1{
+            font-weight: bold;
+        }
+
+        li:hover{
+            a{
+                background-color: unset;
+                color: $colorGreen;
+                    
+                &::before{
+                    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                    font-weight: bold; 
+                    display: inline-block; 
+                    width: 1em; 
+                    color: $colorGreen;
+                }
+            }
+        }
+    }
+
+// css dropdown cart
+
+    &__cart{
+        @include absolute(48px !important,null,null,-110px !important);
+        width: auto;
+        margin: 0 !important;
+        padding: 10px;
+
+        &::before{
+            left: 50%;
+        }
+
+        ul{
+            border-bottom: 1px solid $bottomHeader;
+        }
+
+        &-item{
+            margin-bottom: 15px;
+
+            &:hover{
+                color: unset !important;
+            }
+        }
+
+        &-total{
+            margin-top: 10px;
+
+            span{
+                float: right;
+                color: $colorGreen;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__box{
+        width: 100%;
+        @include flex(space-between)
+    }
+
+    &__content{
+        font-weight: bold;
+        margin: 0 10px;
+
+        h3{
+            color: $colorGreen;
+            margin-top: 10px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
