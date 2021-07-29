@@ -1,0 +1,10 @@
+mixin navTab
+	ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
+		each item in navTabSubCate
+			li.nav-item(role='presentation')
+				button(id=item.id class= item.id=="sub-nav-1" ? "active" : "" data-bs-toggle='pill' data-bs-target="#"+item.content type='button' role='tab' aria-controls=item.content aria-selected="true").nav-link= item.name
+	#pills-tabContent.tab-content
+		each n in navTabSubCate
+				.tab-pane.fade( class= n.content=="nav-content-1" ? "active show" : "" id=n.content role="tabpanel" aria-labelledby=n.id)
+					+navTabItem()
+					

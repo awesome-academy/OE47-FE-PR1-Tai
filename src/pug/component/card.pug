@@ -1,0 +1,39 @@
+mixin cardItem(img,name,type,price)
+		.card
+			img.card-img-top(src=img alt='khong co anh')
+			.card-body
+				h5.card-title= name
+				h3.card-text= type
+				h3.card-text
+					span= price
+					span.products__hover 450.000đ
+			.card-footer
+				a(href="#").btn.btn-outline-dark MUA HÀNG
+				a(href="#").btn.btn-outline-dark
+					i.fa.fa-heart
+				a(href="#").btn.btn-outline-dark
+					i.fa.fa-sync
+
+mixin responseItem(index)
+	case index
+		when "normal"
+			each item,i in navTabItem	
+				.col-2.d-none.d-lg-block
+					+cardItem(item.img,item.name,item.type,item.price)
+		when "medium"
+			each item,i in navTabItem	
+				.col-4.d-none.d-md-block.d-lg-none.mx-auto
+					+cardItem(item.img,item.name,item.type,item.price)
+				if i == 2
+					- break
+		when "small"
+			each item,i in navTabItemRes
+				.col-6.d-none.d-sm-block.d-md-none.mx-auto
+					+cardItem(item.img,item.name,item.type,item.price)
+		when "xs"
+			each item,i in navTabItemRes
+				.col-12.d-block.d-sm-none.mx-auto
+					+cardItem(item.img,item.name,item.type,item.price)
+				if i == 0
+					- break
+					
