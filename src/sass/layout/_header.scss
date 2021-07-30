@@ -1,5 +1,5 @@
 header {
-    @include fixed(0,0,null,0);
+    @include sticky(0,0,null,0);
     z-index: 999;
     height: 80px;
     background-color: $colorGray !important;

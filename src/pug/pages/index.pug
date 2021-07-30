@@ -15,12 +15,10 @@ block content
 				span mới nhất của Mandala  
 			h2 GIÁ CHỈ&emsp;750.000đ
 			button.btn.btn-link MUA HÀNG
-
 	section.promotion.section.p-0
 		.container
 			.row
 				+promotionItem()
-
 	section.categoties.section.p-0
 		.container
 			.row
@@ -43,7 +41,6 @@ block content
 						+itemProducts("images/Home7.jpg")
 						+itemProducts("images/Home8.jpg")
 						+itemProducts("images/Home_4.jpg")
-
 	section.section.qoute
 		.container
 			#myCarousel.carousel.slide(data-bs-ride='carousel')
@@ -57,7 +54,6 @@ block content
 						button.active(type='button' data-bs-target='#myCarousel' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
 						button(type='button' data-bs-target='#myCarousel' data-bs-slide-to='1' aria-label='Slide 2')
 						button(type='button' data-bs-target='#myCarousel' data-bs-slide-to='2' aria-label='Slide 3')
-
 	section.products
 		.container-fluid
 			.row
@@ -69,9 +65,8 @@ block content
 					#nav-tabContent.tab-content
 						#nav-new.tab-pane.fade(role='tabpanel' aria-labelledby='nav-new-tab')
 						#nav-seller.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-seller-tab')
-							+navTab()
+							+navTab(navTabSubCate,"carousel")
 						#nav-special.tab-pane.fade(role='tabpanel' aria-labelledby='nav-special-tab')
-	
 	section.section.social
 		.container
 			.row.justify-content-center
@@ -79,7 +74,6 @@ block content
 				+socailItem("medium")
 				+socailItem("small")
 				+socailItem("xs")
-
 	section.contact.section
 		.container
 			.row

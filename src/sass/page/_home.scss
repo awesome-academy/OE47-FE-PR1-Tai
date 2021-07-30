@@ -1,11 +1,12 @@
-@font-face {
-    src: url("../fonts/UTM ViceroyJF.ttf");
-    font-family: viceroy;
+@include breakpoint-down("xs") {
+    html {
+        width: fit-content;
+    }
 }
 
 .banner {
+    margin-top: -80px;
     position: relative;
-
     &__background {
         // responsive
         img,source {
@@ -24,7 +25,7 @@
         }
 
         h1 {
-            @include font(6vw,viceroy,300);
+            @include font(6vw,$fontVice,300);
         }
 
         p {
