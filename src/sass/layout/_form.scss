@@ -1,0 +1,23 @@
+.contact {
+    &__form {
+        padding: 20px 0;
+        text-align: center;
+
+        input {
+            @include size(100%,40px);
+            border: 1px solid $corlorCorder;
+            padding-left: 20px;
+        }
+
+        p {
+            @include font(0.6rem,$fontDetault,300);
+            margin: 15px 0 10px 0;
+            color: $corlorCorder;
+        }
+
+        button {
+            @include size(80px,30px);
+            margin: 10px 0 20px 0;
+        }
+    }
+}

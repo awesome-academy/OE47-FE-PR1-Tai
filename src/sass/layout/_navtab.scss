@@ -10,17 +10,17 @@
     position: relative;
 
     button {
+        @include font(1rem,"UTM-Androgyne",100);
         color: $corlorCorder;
-        @include font(1rem,"UTM-Androgyne",100)
     }
 
     &::after {
         content: "";
-        background-image: url(../images/Home-line.png);
         @include background(cover,center,no-repeat);
         @include centerPosition("left");
-        bottom: 0;
         @include size(300px,5px);
+        background-image: url(../images/Home-line.png);
+        bottom: 0;
     }
     // responsive
     @include breakpoint-down("xs") {

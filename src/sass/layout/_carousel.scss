@@ -10,7 +10,7 @@
     }
 
     @include breakpoint-down("xs") {
-        bottom: 45%;
+        bottom: 40% !important;
         left: 45% !important;
     }
 
@@ -50,6 +50,10 @@
     height: 400px;
 
     @include breakpoint-down("small") {
+        height: 450px;
+    }
+
+    @include breakpoint-down("xs") {
         height: 650px;
     }
 }

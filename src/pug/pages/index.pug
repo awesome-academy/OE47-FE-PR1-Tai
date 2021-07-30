@@ -71,3 +71,31 @@ block content
 						#nav-seller.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-seller-tab')
 							+navTab()
 						#nav-special.tab-pane.fade(role='tabpanel' aria-labelledby='nav-special-tab')
+	
+	section.section.social
+		.container
+			.row.justify-content-center
+				+socailItem("normal")
+				+socailItem("medium")
+				+socailItem("small")
+				+socailItem("xs")
+
+	section.contact.section
+		.container
+			.row
+				.col-lg-4.col-md-6.col-12
+					+contactItem(contact[0],"images/logo.png")
+				.col-lg-4.col-md-6.col-12
+					+contactItem(contact[1],"images/Home_blog.png")
+				.col-lg-4.col-md-12.col-12.d-lg-block.d-md-flex
+					.contact__box.col-lg-12.col-md-6.col-12.pe-2
+						h1.contact__title= contact[2].title
+						form.contact__form(action="#")
+							input(type="email", name="email", placeholder="Email của bạn")
+							p= contact[2].content
+							button(type="submit").btn.btn-dark GỬI
+					.contact__box.col-lg-12.col-md-6.col-12.ps-2
+						h1.contact__title= contact[3].head
+						br
+						each item in contactItem
+							.btn.btn-light= item

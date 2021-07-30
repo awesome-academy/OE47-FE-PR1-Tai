@@ -40,4 +40,14 @@
             }
         }
     }
+
+    &-light{
+        @extend .btn-link;
+        font-size: 0.7rem;
+        background-color: unset;
+        border-color: $corlorCorder;
+        border-radius: unset;
+        margin: 5px;
+        padding: 3px;
+    }
 }
