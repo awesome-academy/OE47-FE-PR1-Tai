@@ -21,3 +21,22 @@
     }
   }
 }
+
+.form {
+    &__head {
+        @include font(1.5rem,$fontDetault,300);
+        margin: 20px 0;
+    }
+
+    &-label {
+        @include font(0.8rem,$fontDetault,500);
+    }
+
+    &-control {
+        outline: unset;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
