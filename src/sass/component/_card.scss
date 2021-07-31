@@ -36,3 +36,38 @@
     font-size: 0.8rem;
     color: $bottomHeader !important;
 }
+
+.list {
+    &__card {
+        text-align: left;
+        font-weight: 500;
+        padding-bottom: 5px;
+
+        h4 {
+            font-size: 1rem;
+            color: $blackColor;
+            font-weight: 300
+        }
+
+        i {
+            span {
+                font-size: 0.8rem;
+                margin-left: 5px 
+            }
+        }
+
+        h5 {
+            @extend h4;
+            font-family: $fontLobster;
+        }
+
+        p {
+            font-size: 0.7rem;
+            line-height: 20px;
+        }
+
+        p,span {
+            color: $colorText;
+        }
+    }
+}

@@ -5,7 +5,7 @@ mixin cardItem(img,name,type,price)
 				h5.card-title= name
 				h3.card-text= type
 				h3.card-text
-					span= price
+					span.me-2= price
 					span.products__hover 450.000đ
 			.card-footer
 				a(href="#").btn.btn-outline-dark MUA HÀNG
@@ -37,4 +37,38 @@ mixin responseItem(index)
 				.col-12.d-block.d-sm-none.mx-auto
 					+cardItem(item.img,item.name,item.type,item.price)
 				if i == 0
-					- break				
+					- break		
+
+mixin listCard
+	.card.mb-3(style='max-width: 700px;').border-0
+			.row.g-0
+				.col-md-4
+					img.img-fluid.rounded-start(src='images/Home19.jpg' alt='list card')
+				.col-md-8
+					.card-body.list__card
+						h4.card-title Mỹ phẩm châu Âu thương hiệu hàng  đầu thế giới 
+						i.card-text
+							+loop(5)
+								| &hearts;
+							span (5 lượt mua)
+						p.card-text= contentTab[0].content
+						h5 355.000đ
+					.card-footer.d-block.text-start
+						a(href="#").btn.btn-outline-dark MUA HÀNG
+						a(href="#").btn.btn-outline-dark
+							i.fa.fa-heart
+						a(href="#").btn.btn-outline-dark
+							i.fa.fa-sync
+							
+mixin responsiveCard(index)
+	case index
+		when "normal"
+			each item,i in navTabItem
+				if i >= 1 && i<=3
+					.col-lg-4.col-md-6.d-none.d-lg-block
+						+cardItem(item.img,item.name,item.type,item.price)
+		when "medium"
+			each item,i in navTabItem
+				if i >= 1 && i<=2
+					.col-lg-4.col-md-6.col-6.d-md-block.d-lg-none
+						+cardItem(item.img,item.name,item.type,item.price)
