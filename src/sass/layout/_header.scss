@@ -130,6 +130,10 @@ header {
                 color: $colorGreen;
                 font-weight: bold;
             }
+
+            a:hover {
+                color: $whiteColor !important;
+            }
         }
     }
 

@@ -4,15 +4,7 @@ block vars
 	-title = 'Detail Product'
 
 block content
-	section.navigate
-		.container.navigate__contain
-			.row
-				ul.navigate__link
-					each n,i in nagivaItem
-						li
-							a(href=n.url)= n.name
-								if i != nagivaItem.length-1
-									i.fas.fa-chevron-right
+	+navigate(nagivaItem)
 	section.item
 		.container.item__contain
 			.row

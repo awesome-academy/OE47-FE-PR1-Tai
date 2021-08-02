@@ -15,7 +15,8 @@ mixin listSubItems(listItem)
 	ul
 		each items in listItem
 			if items == listItem[0]
-				h1= items
+				h1 
+					a(href=items.url)= items.name
 				li
 					hr.dropdown-divider
 			else
